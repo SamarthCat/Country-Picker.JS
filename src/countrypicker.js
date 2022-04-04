@@ -29,7 +29,7 @@ window.countrySelectButton = (el) => {
 
 
     document.body.setAttribute("mapOpen", "true");
-    el.parentElement.dispatchEvent(new Event("open"));
+    el.parentElement.dispatchEvent(new Event("mapopen"));
 
     setTimeout(() => {
         document.getElementById("countrySelectMap").setAttribute("hasInit", "true");
@@ -69,7 +69,7 @@ addEventListener('message', (event) => {
     var input = document.querySelector("countryinput[data-inputid=\"" + openMap + "\"]")
 
     if (event.data == "cancel"){
-        input.dispatchEvent(new Event("close"));
+        input.dispatchEvent(new Event("mapclose"));
         closeMap();
         return;
     }
@@ -80,7 +80,7 @@ addEventListener('message', (event) => {
     text.innerText = event.data.Name;
     input.dispatchEvent(new Event("change"));
     input.dispatchEvent(new Event("input"));
-    input.dispatchEvent(new Event("close"));
+    input.dispatchEvent(new Event("mapclose"));
     closeMap();
 });
 
