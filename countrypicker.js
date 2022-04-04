@@ -26,10 +26,8 @@ window.countrySelectButton = (el) => {
     document.body.innerHTML += mapFrame.replaceAll("!!WIDTH!!", width).replaceAll("!!HEIGHT!!", height).replaceAll("!!MAPSTYLE!!", style).replaceAll("!!CLASS!!", mapclass);
 
 
-
-
     document.body.setAttribute("mapOpen", "true");
-    el.parentElement.dispatchEvent(new Event("mapopen"));
+    el.parentElement.dispatchEvent(new CustomEvent("mapopen"));
 
     setTimeout(() => {
         document.getElementById("countrySelectMap").setAttribute("hasInit", "true");
@@ -69,7 +67,7 @@ addEventListener('message', (event) => {
     var input = document.querySelector("countryinput[data-inputid=\"" + openMap + "\"]")
 
     if (event.data == "cancel"){
-        input.dispatchEvent(new Event("mapclose"));
+        input.dispatchEvent(new CustomEvent("mapclose"));
         closeMap();
         return;
     }
@@ -80,7 +78,7 @@ addEventListener('message', (event) => {
     text.innerText = event.data.Name;
     input.dispatchEvent(new Event("change"));
     input.dispatchEvent(new Event("input"));
-    input.dispatchEvent(new Event("mapclose"));
+    input.dispatchEvent(new CustomEvent("mapclose"));
     closeMap();
 });
 
