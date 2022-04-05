@@ -72,3 +72,32 @@ The object also has other properties:
 }
 
 ```
+
+# Styling The Input
+
+Internally, the ``` <countryinput> ``` element is made up of a ``` <button> ``` and a ``` <label> ```, so you can apply styles to those:
+
+```css
+
+countryinput {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+countryinput label, countryinput button {
+    color: rgb(158, 158, 158);
+    font-family: "Montserrat";
+    margin-left: 10px;
+}
+countryinput button {
+    transition: 0.3s;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.452);
+    width: 100px;
+    border: none;
+    border-radius: 5px;
+}
+
+```
+![image](https://user-images.githubusercontent.com/79756986/161695925-cd07b758-7db7-440f-9c43-1f57f07c67be.png)
+
