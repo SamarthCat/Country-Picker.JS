@@ -6,6 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdn.jsdelivr.net/gh/SamarthCat/Country-Picker.JS@1.0.0/countrypicker.js"></script>
+    <style>
+
+        countryinput {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        countryinput label, countryinput button {
+            color: rgb(158, 158, 158);
+            font-family: "Montserrat";
+            margin-left: 10px;
+        }
+        countryinput button {
+            transition: 0.3s;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.452);
+            width: 100px;
+            border: none;
+            border-radius: 5px;
+        }
+
+    </style>
 </head>
 <body>
     <countryinput onclose="alert('close');" onload="alert('open')"></countryinput>
