@@ -9,7 +9,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/gh/SamarthCat/Country-Picker.JS@main/countrypicker.js"></script>
+    <!--DEV SCRIPT-->
+    <script src="../countrypicker.js"></script>
+
+    <!--REAL SCRIPT-->
+    <!-- <script src="https://cdn.jsdelivr.net/gh/SamarthCat/Country-Picker.JS@1.0.0/countrypicker.js"></script> -->
     <title>CountryPicker.JS Demo</title>
     <style>
         body {
@@ -26,6 +30,8 @@
             overflow: hidden;
         }
 
+        
+
         .form {
             margin: auto;
             width: 700px;
@@ -35,6 +41,26 @@
             border-radius: 25px;
             display: flex;
             flex-direction: column;
+        }
+
+        @media only screen and (max-width: 600px) {
+            body {
+                overflow-y: scroll;
+
+                margin: 0;
+            }
+
+            .form {
+                width: 100%;
+                height: auto;
+                border-radius: 0px;
+                background-color: transparent;
+                backdrop-filter: blur(10px) brightness(0.4);
+            }
+
+            countryinput {
+                margin-bottom: 100px;
+            }
         }
 
         h1, p {

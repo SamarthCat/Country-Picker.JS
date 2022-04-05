@@ -8,7 +8,7 @@ var defaultInputElement = `
 `;
 
 var mapFrame = `
-<iframe onload="countryFrameLoad(this)" class="countryMap !!CLASS!!" style="border: none; position: absolute; z-index: 9999; width: !!WIDTH!!; height: !!HEIGHT!!; !!MAPSTYLE!!" id="countrySelectMap" src="./map.html"></iframe>
+<iframe onload="countryFrameLoad(this)" class="countryMap !!CLASS!!" style="border: none; position: fixed; z-index: 9999; width: !!WIDTH!!; height: !!HEIGHT!!; max-height: 100vh; max-width: 100vw; !!MAPSTYLE!!" id="countrySelectMap" src="./map.html"></iframe>
 `;
 
 var openMap = null;
